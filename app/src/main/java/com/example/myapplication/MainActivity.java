@@ -28,5 +28,17 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
+
+        btnFrame.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, FrameAnimationActivity.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+        });
+
+        btnTween.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, TweenAnimationActivity.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+        });
     }
 }
